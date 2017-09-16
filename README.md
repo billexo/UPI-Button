@@ -3,4 +3,4 @@ On your mobile websites, you can take donations/receive payments using UPI. We a
   
 # Where to generate UPI Payment button?
 
-Open - [https://billexo.github.io/UPI-Button|https://billexo.github.io/UPI-Button]
+Open - https://billexo.github.io/UPI-Button
