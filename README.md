@@ -1,12 +1,6 @@
 # Pay using UPI Button for Mobile Websites.
 On your mobile websites, you can take donations/receive payments using UPI. We are giving a simple method to generate "Pay using UPI" button.
   
-# Is it Ready?
-No, we are working on this code repo.
+# Where to generate UPI Payment button?
 
-# Sample Code
-
-```html
-<div id="upi-pay-button-" data-text="Pay using UPI" data-name="Narendra Sisodiya" data-upi="9891341086@upi">
-</div>
-```
+Open - [https://billexo.github.io/UPI-Button|https://billexo.github.io/UPI-Button]
