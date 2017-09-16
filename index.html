@@ -2,9 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pay using UPI button generator</title>
+    <title>UPI Payment Button Generator</title>
+    <style>
+        #render {
+            text-align: center;
+        }
+        .question {
+            background: #e2e2e2;
+            padding: 6px;
+            margin-bottom: 13px;
+        }
+        .question p:first-child  {
+            font-weight: bold;
+        }
+        .group {
+            padding: 10px;
+        }
+        .sidetext {
+            float: left;
+            margin-right: 26px;
+            font-size: large;
+            width: 200px;
+        }
+        input {
+            font-size: large;
+            padding: 7px;
+            width: 250px;
+        }
+        #generated {
+            width: 100%;
+            background: grey;
+            padding: 20px;
+            color: aquamarine;
+            font-size: medium;
+            line-height: 1.5;
+            font-family: Courier;
+        }
+    </style>
 </head>
 <body>
-<h1>Pay using BHIM/UPI button generator.</h1>
+
+<h1>UPI Payment Button Generator.</h1>
+<div>
+    <div class="group">
+        <div class="sidetext">Button Text</div>
+        <input type="text" value="Pay using UPI">
+
+    </div>
+    <div class="group">
+        <div class="sidetext">Name</div>
+        <input type="text" value="Narendra Sisodiya">
+    </div>
+    <div class="group">
+        <div class="sidetext">UPI Id</div>
+        <input type="text" value="9891341086@upi">
+    </div>
+</div>
+
+<h1>Button Design</h1>
+<div id="render"><a style="background: #ff912f;border: 2px solid #8a4100;padding: 10px;text-decoration: none;color: white;font-size: larger;border-radius: 10px;" href="upi://pay?pa=9891341086@upi&pn=NARENDRA SISODIYA&cu=INR">Pay Using UPI</a></div>
+
+<h1>Button Code</h1>
+<div id="generated">--</div>
+
+<h1>FAQ</h1>
+<div class="question">
+    <p>Q - Why this page looks ugly?</p>
+    <p>A - I am super lazy when it comes to CSS. Please send me a PR. <a href="https://github.com/billexo/UPI-Button">https://github.com/billexo/UPI-Button</a></p>
+</div>
+<div class="question">
+    <p>Q - Where you can use this button?</p>
+    <p>A - In your mobile website where you want to accept UPI Payments.</p>
+</div>
+
+<div class="question">
+    <p>Q - What happen when we click the button?</p>
+    <p>A - When customer clicks the button, it will open BHIM or anyother UPI app. You can pay using UPI app.</p>
+</div>
+
+<div class="question">
+    <p>Q - Can we use this button for donation buttons on my site?</p>
+    <p>A - Yes.</p>
+</div>
+
+<div class="question">
+    <p>Q - Can I use this button on my shopping kart?</p>
+    <p>A - No. Shopping kart need database level integration where payment status needed to be tracked from Payment Gateway or Bank Server.</p>
+    <p>You can contact us or other payment gateway for UPI integration to your shopping kart.</p>
+    <p>Email - narendra@billexo.com</p>
+</div>
+
+
+<script>
+    //Now, Page is loaded. Copy rendered button into pre-tag
+    function htmlEntities(str) {
+      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    var code = document.getElementById("render").innerHTML;
+    document.getElementById("generated").innerHTML = htmlEntities(code);
+</script>
 </body>
 </html>
